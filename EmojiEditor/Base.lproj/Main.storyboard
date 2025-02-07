@@ -50,7 +50,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="emojiLabel" destination="nc6-Li-Kdd" id="g0k-EZ-Ch2"/>
-                                    <segue destination="3lu-f3-hdW" kind="presentation" id="Jhk-VF-RyP"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -71,6 +70,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="3lu-f3-hdW" kind="presentation" identifier="Edit" id="C9d-xi-cfa"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TlX-zc-uUj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="vqb-LT-ywl" userLabel="Exit" sceneMemberID="exit"/>
@@ -229,7 +231,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Jhk-VF-RyP"/>
+        <segue reference="C9d-xi-cfa"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
