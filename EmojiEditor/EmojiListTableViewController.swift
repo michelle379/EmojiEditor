@@ -11,7 +11,7 @@ class EmojiListTableViewController: UITableViewController {
     
     var EmojiList:emoji! {
         didSet{
-            
+            emoji.updateContents(EmojiList)
         }
     }
     

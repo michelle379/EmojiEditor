@@ -28,6 +28,21 @@ struct emoji: Codable {
         return try? decoder.decode([emoji].self, from: data)
     }
     
+    static func updateContents(_ EmojiContents:emoji){
+        // 讀取現有的 Emoji 資料
+        guard var storedEmojis = emoji.loadData() else { return }
+
+        // 找到要更新的 mood
+        if let index = storedEmojis.firstIndex(where: { $0.mood == EmojiContents.mood }) {
+            storedEmojis[index].contents = EmojiContents.contents  // 更新內容
+        }
+
+        // 儲存更新後的資料
+        emoji.saveData(storedEmojis)
+        
+        
+    }
+    
 
 }
 
